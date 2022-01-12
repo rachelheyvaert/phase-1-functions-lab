@@ -1,15 +1,47 @@
 // Code your solution in this file!
-
+//add console.logs to display arguments**
 //Function 1
-let hQ = 42
+let hQ = 42;
 function distanceFromHqInBlocks(location) {
     if (location < 42) {
-    return hQ - location;
-} else { (location >= 42)
-    return location - hQ
+        return hQ - location;
+    } else {
+        (location >= 42) //don't need
+        return location - hQ
+    }
 }
-}
-distanceFromHqInBlocks(43);
-
 //function 2
+let feet = 264;
+function distanceFromHqInFeet(location){
+   return feet * distanceFromHqInBlocks(location);
+}
 
+
+//function 3
+function distanceTravelledInFeet(start, destination) {
+    console.log("this is the start argument:")
+    if (start > destination) {
+        return (start - destination) * feet
+    } else {
+        return (destination - start) * feet
+    }
+
+    console.log(start)
+console.log("this is the destination argument")
+console.log(destination)
+}
+  
+
+//function 4
+function calculatesFarePrice(distanceTravelledInFeet) {
+    console.log()
+    if ( distanceTravelledInFeet<= 400) {
+        return 0
+    } if (distanceTravelledInFeet >= 401 && distanceTravelledInFeet <= 2000) {
+        return (distanceTravelledInFeet - 400) * .02
+    } if (distanceTravelledInFeet > 2000 && distanceTravelledInFeet <= 2500) {
+        return 25
+    }if (distanceFromHqInFeet >= 2500) {
+        return 'Cannot travel that far.'}
+        
+    }
