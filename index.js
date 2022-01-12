@@ -33,15 +33,16 @@ console.log(destination)
   
 
 //function 4
-function calculatesFarePrice(distanceTravelledInFeet) {
-    console.log()
-    if ( distanceTravelledInFeet<= 400) {
-        return 0
-    } if (distanceTravelledInFeet >= 401 && distanceTravelledInFeet <= 2000) {
-        return (distanceTravelledInFeet - 400) * .02
-    } if (distanceTravelledInFeet > 2000 && distanceTravelledInFeet <= 2500) {
+let distance = distanceTravelledInFeet(start, destination);
+
+function calculatesFarePrice(distance)
+ {
+    console.log("This is the first argument")
+    if ( distance <= 400) {
+        return 0 }
+    else if (distance >= 400 && distance < 2000) {
+        return ((distance - 400) * .02)
+    }else if (distance >= 2000 && distance <= 2500) {
         return 25
-    }if (distanceFromHqInFeet >= 2500) {
-        return 'Cannot travel that far.'}
-        
-    }
+    }else { return 'cannot travel that far'}
+}
